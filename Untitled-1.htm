@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum - Daniel Lorenzo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+        
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #2a5d8a;
+            padding-bottom: 20px;
+        }
+        
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        
+        @media (min-width: 768px) {
+            .profile-section {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+        }
+        
+        .photo-container {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #e9f2fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            border: 3px solid #2a5d8a;
+            overflow: hidden;
+        }
+        
+        @media (min-width: 768px) {
+            .photo-container {
+                margin-right: 30px;
+                margin-bottom: 0;
+            }
+        }
+        
+        .photo-placeholder {
+            color: #2a5d8a;
+            font-size: 14px;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        .profile-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .info-container {
+            flex: 1;
+            text-align: center;
+        }
+        
+        @media (min-width: 768px) {
+            .info-container {
+                text-align: left;
+            }
+        }
+        
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2a5d8a;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+        
+        h2 {
+            font-size: 18px;
+            font-weight: normal;
+            color: #2a5d8a;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #2a5d8a;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        
+        .profile-text {
+            text-align: justify;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .skills-category {
+            flex: 1 1 100%;
+            margin-bottom: 15px;
+        }
+        
+        .skills-category h3 {
+            font-size: 14px;
+            color: #2a5d8a;
+            margin-bottom: 8px;
+        }
+        
+        .skills-list {
+            list-style-type: none;
+        }
+        
+        .skills-list li {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        
+        .languages-list {
+            list-style-type: none;
+        }
+        
+        .languages-list li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .experience-item {
+            margin-bottom: 20px;
+        }
+        
+        .company-name {
+            font-weight: bold;
+            color: #2a5d8a;
+            margin-bottom: 5px;
+        }
+        
+        .job-title {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .job-description {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .technical-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .skill-category {
+            flex: 1 1 100%;
+            margin-bottom: 15px;
+        }
+        
+        .skill-category h4 {
+            font-size: 14px;
+            color: #2a5d8a;
+            margin-bottom: 8px;
+        }
+        
+        .skill-items {
+            font-size: 14px;
+        }
+        
+        .education-item {
+            margin-bottom: 15px;
+        }
+        
+        .education-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .education-institution {
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+        
+        .projects-list {
+            list-style-type: none;
+        }
+        
+        .projects-list li {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        @media (min-width: 768px) {
+            .skills-category {
+                flex: 1 1 45%;
+            }
+            
+            .skill-category {
+                flex: 1 1 45%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-section">
+                <div class="photo-container">
+                    <!-- Reemplazar con imagen real -->
+                    <div class="photo-placeholder">
+                        <img src="./unnamed.jpg" alt="Foto de Daniel Lorenzo" class="profile-photo">
+                    </div>
+                </div>
+                
+                <div class="info-container">
+                    <h1>DANIEL LORENZO</h1>
+                    <h2>INGENIERO DE SOFTWARE</h2>
+                    <div class="contact-info">
+                        +53 50450631 &nbsp;&nbsp;&nbsp; danielloren124@gmail.com
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <section class="section">
+            <div class="section-title">PERFIL PROFESIONAL</div>
+            <p class="profile-text">
+                Ingeniero de software especializado en Desarrollo Backend Web, con sólida experiencia en la creación de APIs escalables, seguras y de alto rendimiento. Dominio de frameworks como Django, FastAPI y Flask, aplicando buenas prácticas de programación, patrones de diseño y optimización de recursos. Comprometido con la calidad del código, la eficiencia de los sistemas y la mejora continua de los procesos tecnológicos.
+            </p>
+        </section>
+        
+        <section class="section">
+            <div class="section-title">HABILIDADES</div>
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3>COMPETENCIAS BLANDAS</h3>
+                    <ul class="skills-list">
+                        <li>• RESOLUCIÓN DE PROBLEMAS</li>
+                        <li>• COMUNICACIÓN EFECTIVA</li>
+                        <li>• TRABAJO EN EQUIPO</li>
+                        <li>• LIDERAZGO TÉCNICO</li>
+                        <li>• ADAPTABILIDAD Y APRENDIZAJE CONTINUO</li>
+                    </ul>
+                </div>
+                
+                <div class="skills-category">
+                    <h3>IDIOMAS</h3>
+                    <ul class="languages-list">
+                        <li>- Español - Nativo</li>
+                        <li>- Ingles - Técnico</li>
+                        <li>- Portugués - Básico</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <div class="experience-item">
+                <div class="company-name">Empresa CIMEX</div>
+                <div class="job-title">Engeniero de software</div>
+                <ul class="job-description">
+                    <li>- Responsable de liderar equipos que se encargaron del ciclo de desarrollo de software de 10 proyectos de clientes de principio a fin.</li>
+                    <li>- Construí una infraestructura que maneja millones de archivos de clientes en sistemas propietarios.</li>
+                </ul>
+                
+                <div class="technical-skills">
+                    <div class="skill-category">
+                        <h4>Lenguajes:</h4>
+                        <div class="skill-items">Python, JavaScript, SQL</div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Frameworks Backend:</h4>
+                        <div class="skill-items">Django, FastAPI, Flask</div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Bases de datos:</h4>
+                        <div class="skill-items">PostgreSQL, MySQL, SQLite, MongoDB</div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Servicios Web:</h4>
+                        <div class="skill-items">RESTful, GraphQL</div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Control de versiones:</h4>
+                        <div class="skill-items">Git, GitHub, GitLab</div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Infraestructura y despliegue:</h4>
+                        <div class="skill-items">Docker, Nginx, AWS, Heroku</div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Pruebas y QA:</h4>
+                        <div class="skill-items">Pytest, Unittest, Postman</div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Metodologías:</h4>
+                        <div class="skill-items">Agile / Scrum, CI/CD</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <div class="section-title">FORMACIÓN ACADÉMICA</div>
+            
+            <div class="education-item">
+                <div class="education-title">Máster en Procesos Formativos y Desarrollo Profesional</div>
+                <div class="education-institution">[Universidad de Sancti Spiritus "José Martí Pérez"]</div>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-title">Ingeniero de Software</div>
+                <div class="education-institution">[Universidad de Sancti Spiritus "José Martí Pérez"]</div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <div class="section-title">PROYECTOS DESTACADOS</div>
+            <ul class="projects-list">
+                <li>• API de Gestión de Usuarios: Desarrollo con FastAPI y PostgreSQL.</li>
+                <li>• Sistema de Inventario Web: Backend implementado con Django REST Framework.</li>
+                <li>• Microservicio Analítico: Creado con Flask y MongoDB para generación de reportes.</li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        // Script opcional para cargar una imagen de perfil
+        document.addEventListener('DOMContentLoaded', function() {
+            // Para cargar una imagen real, reemplace la siguiente línea con la ruta de la imagen
+            // const photoUrl = 'ruta/a/tu/foto.jpg';
+            
+            // Ejemplo de cómo cargar la imagen si está disponible
+            /*
+            if (photoUrl) {
+                const photoContainer = document.querySelector('.photo-container');
+                photoContainer.innerHTML = '';
+                const img = document.createElement('img');
+                img.src = photoUrl;
+                img.alt = 'Foto de Daniel Lorenzo';
+                img.className = 'profile-photo';
+                photoContainer.appendChild(img);
+            }
+            */
+        });
+    </script>
+</body>
+</html>
